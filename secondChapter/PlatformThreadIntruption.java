@@ -8,6 +8,7 @@ public class PlatformThreadIntruption {
             for (int i = 0; i < 5; i++) {
                 System.out.println("Platform Thread Working : "+ i);
                 Thread.sleep(1000);
+                System.out.println("Platform Thread Completed : "+ i);
             }
             System.out.println("Platform Thread Finished...");
         } catch (InterruptedException e) {
@@ -16,8 +17,7 @@ public class PlatformThreadIntruption {
     });
     try {
         Thread.sleep(2500);
-    } catch (InterruptedException e) {
-    }
+    } catch (InterruptedException e) {}
     platformThread.interrupt();
-   } 
+   }
 }
